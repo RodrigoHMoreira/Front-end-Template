@@ -14,9 +14,7 @@ const Root = styled.body`
 export function About(){
     return(
         <Root>
-            <p>
-                about us
-            </p>
+            <p>about us</p>
         </Root>
     );
 };

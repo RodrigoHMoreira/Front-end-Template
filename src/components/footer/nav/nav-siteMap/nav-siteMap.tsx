@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Root = styled.body`
-    width: 72px;
+    width: 114px;
     height: 100%;
     background-color: transparent;
     color: #FFFFFF;
@@ -12,10 +12,10 @@ const Root = styled.body`
     letter-spacing: 0.32px;
     
 `
-export function Faq() {
+export function SiteMap() {
     return (
         <Root>
-            <p>faq</p>
+            <p>site map</p>
         </Root>
     );
 };

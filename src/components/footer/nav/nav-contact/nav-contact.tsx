@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Root = styled.body`
     width: 128px;
-    height: 47px;
+    height: 100%;
     background-color: transparent;
     color: #FFFFFF;
     display: flex;
@@ -15,7 +15,7 @@ const Root = styled.body`
 export function Contact() {
     return (
         <Root>
-            contact us
+            <p>contact us</p>
         </Root>
     );
 };

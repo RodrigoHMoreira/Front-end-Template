@@ -8,6 +8,8 @@ export const WrapFooter = styled.body`
     flex-direction: column;
     align-items: center;
 `
+//Wrap of Navegation
+
 export const FooterNavContainer = styled.div`
     display: flex;
     margin: 41px 0px 0px 0px;
@@ -25,6 +27,9 @@ export const FooterNavLink = styled.a`
        border-right: 2px #fff solid;
     }
 `
+
+//Wrap for Icons
+
 export const FooterIconsContainer = styled.div`
     display: flex;
     width: 70vw;

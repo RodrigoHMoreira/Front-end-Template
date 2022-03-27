@@ -17,7 +17,6 @@ export const WrapMainTitle = styled.h1`
     color: #389CD6;
     letter-spacing: 0.78px;
 `
-
 export const WrapMainText01 = styled.div`
     margin: 40px 0px 0px;
     width:29%;
@@ -72,7 +71,7 @@ export const WrapCardProductName = styled.div`
     border-radius: 0px 0px 16px 16px;
     padding: 20px 23px 24px 21px;
 `
-//Buttons
+//Button
 
 export const WrapBtn = styled.div`
     width: 16%;

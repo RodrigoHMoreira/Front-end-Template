@@ -1,7 +1,7 @@
 import bannerImage from '../../assets/banner/banner.png'
 import bannerImage02 from "../../assets/banner02/banner02.png"
 import iconsImage from "../../assets/file-icons/file-icons.png"
-import { WrapMain, WrapMainTitle, WrapMainText01, WrapMainText02, WrapMainParagraph, WrapCardProductName, WrapCardMain, WrapCardBox, WrapCardText, WrapBtn } from "./main"; 
+import { WrapMain, WrapMainTitle, WrapMainText01, WrapMainText02, WrapMainParagraph, WrapCardProductName, WrapCardMain, WrapCardBox, WrapCardText, WrapBtn } from "../../styles/main"; 
 
 type CardsProductsProps = {
     src: string,

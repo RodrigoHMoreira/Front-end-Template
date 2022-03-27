@@ -1,46 +1,45 @@
-import logoImage from '../../assets/header/Module 1 - Header 970x60025.png';
-import searchIcon from '../../assets/ic.search.svg';
-import styled from 'styled-components';
-import { Nav } from './nav';
+import logoImage from '../../assets/logo01/logo01.png'
+import searchIcon from '../../assets/icon-search.svg';
+import { WrapHeader, HeaderPresentContainer, HeaderNavContainer, HeaderNavLink } from '../../styles/header';
 
-const Root = styled.body`
-    width: 1920px;
-    height: 129px;
-    background: #FFFFFF;
+type HeaderNavProps = {
+    link: string;
+    text: string;
+}
 
-    .rectangle05 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 62%;
-        box-shadow: 0px 4px 16px #00000014;    
+const routes: HeaderNavProps[] = [
+    {
+        link:'#',
+        text: 'about us'
+    },
+    {
+        link:'#',
+        text: 'our products'
+    },
+
+    {
+        link:'#',
+        text: 'intimate health'
+    },
+
+    {
+        link:'#',
+        text: 'contact us'
     }
-
-    .logo {
-        width: 195px;
-        height: 79px;
-    }
-
-    .icon {
-        width: 24px;
-        height: 24px;
-        position: relative;
-        left: calc(1920px - 1469px);    
-    }
-
-`
+]
 
 export function Header(){
     return(
-        <Root>
-            <div className='rectangle05'>
-                <img className='logo' src={logoImage} alt='logo image'/>
-                <img className='icon' src={searchIcon} alt='serach icon'/>
-            </div>
-            <div className='rectangle26'>
-                <Nav/>
-            </div>
-        </Root>
+        <WrapHeader>
+            <HeaderPresentContainer>
+                <img className='logo' src={logoImage} alt='logo image' style={{width:"195px", height:"79px"}}/>
+                <img className='icon' src={searchIcon} alt='serach icon' style={{width:"24px", height:"24px"}}/>
+            </HeaderPresentContainer>
+            <HeaderNavContainer>
+                {routes.map((item) => (
+                    <HeaderNavLink key={item.text} href={item.link}>{item.text}</HeaderNavLink>
+                ))}
+            </HeaderNavContainer>
+        </WrapHeader>
     );
 };

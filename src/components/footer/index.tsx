@@ -1,44 +1,54 @@
-import styled from "styled-components";
-import { NavFooter } from "./nav";
-import logo from "../../assets/image/Image 1@2x.png"
-import logoInstagram from "../../assets/Layer 2.svg"
+import logo from "../../assets/logo02/logo02.png"
+import logoInstagram from "../../assets/icon-instagram.svg"
+import { WrapFooter, FooterNavContainer, FooterNavLink, FooterIconsContainer } from "../../styles/footer";
 
-const Root = styled.body`
-    margin: 120px 0px 0px;      
-    background-color: #389CD6;
-    width: 1920px;
-    height: 242px;
+type FooterNavProps = {
+    link: string;
+    text: string;
+}
 
-    .file-icons {
-        margin: 69px 0px 56px 0px;
-        width: 100%;
-        height: 43px;
-        display: flex;
-        justify-content: space-between;
-    }
+const route: FooterNavProps[] = [
+    {
+        link:'#',
+        text: 'contact us'
+    },
+    {
+        link:'#',
+        text: 'faq'
+    },
 
-    .logo-image {
-        margin: 0px 0px 0px 394px;
-        width: 116px;
-        height: 29px;
-    }
+    {
+        link:'#',
+        text: 'site map'
+    },
 
-    .logo-instagram {
-        margin: 0px 394px 0px 0px;
-        width: 43px;
-        height: 43px;
-    }
+    {
+        link:'#',
+        text: 'privacy policy'
+    },
+    {
+        link:'#',
+        text: 'cookies policy'
+    },
 
-`
+    {
+        link:'#',
+        text: 'legal notice'
+    },
+]
 
 export function Footer() {
     return(
-        <Root>
-            <NavFooter/>
-            <div className="file-icons">
-                <img src={logo} className="logo-image" alt="logo-image"/>
-                <img src={logoInstagram} className="logo-instagram" alt="logo-instagram"/>
-            </div>
-        </Root>
+        <WrapFooter>
+            <FooterNavContainer>
+                {route.map((item) => (
+                        <FooterNavLink  key={item.text} href={item.link}>{item.text}</FooterNavLink>
+                ))}
+            </FooterNavContainer>
+            <FooterIconsContainer>
+                <img src={logo} className="logo-image" alt="logo-image" style={{width:"116px", height:"29px"}}/>
+                <img src={logoInstagram} className="logo-instagram" alt="logo-instagram" style={{width:"43px", height:"43px"}}/>
+            </FooterIconsContainer>
+        </WrapFooter>
     );
 };

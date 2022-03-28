@@ -4,6 +4,7 @@ import iconsImage from "../../assets/file-icons/file-icons.png"
 import { WrapMain, WrapMainTitle, WrapMainText01, WrapMainText02, WrapMainParagraph, WrapCardProductName, WrapCardMain, WrapCardBox, WrapCardText, WrapBtn } from "../../styles/main"; 
 
 type CardsProductsProps = {
+    id: string,
     src: string,
     text: string,
     name: string,
@@ -11,6 +12,7 @@ type CardsProductsProps = {
 }
 
 type CardsArticlesProps = {
+    id: string,
     src: string,
     text: string,
     name: string,
@@ -18,18 +20,21 @@ type CardsArticlesProps = {
 
 const cardProduct: CardsProductsProps[] = [
     {
+        id: 'wellness',
         src:  '../../assets/blue-mask/bluemask.png',
         text: 'intibiome wellness daily intimate wash',
         name: 'wellness',
         background: '#389CD6'
     },
     {
+        id: 'active',
         src:  '../../assets/green-mask/greenmask.png',
         text: 'intibiome active extra protection intimate wash',
         name: 'active',
         background: '#309D5F'
     },
     {
+        id: 'agecare',
         src:  '../../assets/pink-mask/pinkmask.png',
         text: 'intibiome agecare dryness relief intimate wash',
         name: 'agecare',
@@ -39,16 +44,19 @@ const cardProduct: CardsProductsProps[] = [
 
 const cardArticles: CardsArticlesProps[] = [
     {
+        id: 'card01',
         src:  '../../assets/card01/card01.png',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         name: 'card01'
     },
     {
+        id: 'card02',
         src:  '../../assets/card02/card02.png',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         name: 'card02'
     },
     {
+        id: 'card03',
         src:  '../../assets/card03/card03.png',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         name: 'card03'
@@ -60,7 +68,7 @@ export function Main() {
     return(
         <WrapMain>
             <img className="banner" src={bannerImage} alt='banner image' style={{width:"100%", height:"550px"}}/>
-            <WrapMainTitle>we’re here to help</WrapMainTitle>
+            <WrapMainTitle id="brand-philosophy">we’re here to help</WrapMainTitle>
             <WrapMainText01>
                 <WrapMainParagraph>
                     When it comes to caring for our most intimate areas, we’ve lost our connection.
@@ -73,7 +81,7 @@ export function Main() {
                 </WrapMainParagraph>
             </WrapMainText01>
             <img className="icons" src={iconsImage} alt='icons image' style={{width:"59%", height:"259px", marginTop:"40px"}}/>
-            <WrapMainTitle>whatever your age. whatever your lifestyle. whatever your interests. </WrapMainTitle>
+            <WrapMainTitle id="product technology">whatever your age. whatever your lifestyle. whatever your interests. </WrapMainTitle>
             <WrapMainText02>
                 <WrapMainParagraph>
                     Co-created with gynaecologists, our revolutionary products have been expertly developed to support your intimate microbiome and pH balance, and strengthen overall natural health.
@@ -82,12 +90,10 @@ export function Main() {
                     As the experts in intimate hygiene, we want to bring discussion about intimate wellness care out of the dark and demystify the taboos that surround it.
                 </WrapMainParagraph>
             </WrapMainText02>
-            <WrapMainTitle>
-                our products
-            </WrapMainTitle>
+            <WrapMainTitle id="products">our products</WrapMainTitle>
             <WrapCardMain>
                 {cardProduct.map((item) => (
-                    <WrapCardBox>
+                    <WrapCardBox id={item.id}>
                         <img key={item.name} src={item.src} alt={item.name} style={{width:'356px', height:'351px'}}/>
                         <WrapCardText>
                             {item.text}
@@ -99,11 +105,11 @@ export function Main() {
                 ))}
             </WrapCardMain>
             <img  src={bannerImage02} alt='banner-Image02' style={{width:"100%", height:"437px", marginTop:"120px"}}/>
-            <WrapMainTitle>keep up to date with our discoveries</WrapMainTitle>
+            <WrapMainTitle id="articles">keep up to date with our discoveries</WrapMainTitle>
             <WrapCardMain>
                 {cardArticles.map((item) => (
-                    <WrapCardBox>
-                        <img key={item.name} src={item.src} alt={item.name} style={{width:'357px', height:'232px'}}/>
+                    <WrapCardBox id={item.id}>
+                        <img key={item.name} id={item.id} src={item.src} alt={item.name} style={{width:'357px', height:'232px'}}/>
                         <WrapCardText>
                             {item.text}
                         </WrapCardText>

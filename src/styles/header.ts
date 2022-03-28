@@ -19,12 +19,6 @@ export const HeaderPresentContainer = styled.div`
 
 //Wrap of Navegation
 
-export const HeaderNavContainer = styled.div`
-    display: flex;
-    justify-content: center; 
-    background-color: #389CD6;
-    width: 100%;
-`
 
 export const HeaderNavLink = styled.a`
     display: flex;
@@ -40,6 +34,17 @@ export const HeaderNavLink = styled.a`
         margin: 0px 20px;
     }
 `
+export const HeaderNavContainer = styled.div`
+    display: flex;
+    justify-content: center; 
+    background-color: #389CD6;
+    width: 100%;
+
+    &:hover ${HeaderNavLink} {
+        background-color: red;
+    }
+`
+
 export const HeaderNavHover = styled.div`
     width: 100%;
     display: flex;

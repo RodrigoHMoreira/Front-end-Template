@@ -1,131 +1,147 @@
 import logoImage from '../../assets/logo01/logo01.png'
 import searchIcon from '../../assets/icon-search.svg';
-import { WrapHeader, 
-    HeaderPresentContainer, 
-    HeaderNavContainer, 
+import { HeaderPresentContainer, 
+    HeaderNavContainer,
     HeaderNavLink, 
-    HeaderNavHover 
+    HeaderNavHover,
 } from './header';
 
 type HeaderNavProps = {
     id:string,
     link: string;
     text: string;
+    nav?:[
+        {
+            id?:string,
+            link?: string;
+            text?: string;
+        },
+        {
+            id?:string,
+            link?: string;
+            text?: string;
+        },
+        {
+            id?:string,
+            link?: string;
+            text?: string;
+        },
+        {
+            id?:string,
+            link?: string;
+            text?: string;
+        }
+    ]
 }
 
 const routes: HeaderNavProps[] = [
     {
-        id:'01',
+        id:'nav01',
         link:'#',
-        text: 'about us'
+        text: 'about us',
+        nav: [
+            {
+                id:'nav05',
+                link: '#brand-philosophy',
+                text: 'brand philosophy'    
+            },
+            {
+                id:'nav06',
+                link: '#product-technology',
+                text: 'product technology'    
+            },
+            {
+                id:'',
+                link: '',
+                text: ''    
+            },
+            {
+                id:'',
+                link: '',
+                text: ''    
+            }
+        ]
     },
     {
-        id:'02',
+        id:'nav02',
         link:'#',
-        text: 'our products'
+        text: 'our products',
+        nav: [
+            {
+                id:'nav07',
+                link: '#products',
+                text: 'all products'    
+            },
+            {
+                id:'nav08',
+                link: '#products',
+                text: 'intibiome wellness'    
+            },
+            {
+                id:'nav09',
+                link: '#products',
+                text: 'intibiome active'    
+            },
+            {
+                id:'nav10',
+                link: '#products',
+                text: 'intibiome agecare'    
+            }
+        ]
     },
-
     {
-        id:'03',
+        id:'nav03',
         link:'#',
-        text: 'intimate health'
+        text: 'intimate health',
+        nav: [
+            {
+                id:'nav11',
+                link: '#articles',
+                text: 'article 1'    
+            },
+            {
+                id:'nav12',
+                link: '#articles',
+                text: 'article 2'    
+            },
+            {
+                id:'nav13',
+                link: '#articles',
+                text: 'article 3'    
+            },
+            {
+                id:'nav14',
+                link: '#',
+                text: 'faq'    
+            }
+        ]
     },
-
     {
-        id:'04',
+        id:'nav04',
         link:'#',
-        text: 'contact us'
+        text: 'contact us',
     }
 ]
-
-const about: HeaderNavProps[] = [
-    {
-        id:'05',
-        link: '#brand-philosophy',
-        text: 'brand philosophy'    
-    },
-    {
-        id:'06',
-        link: '#product-technology',
-        text: 'product technology'    
-    }
-]
-
-const products: HeaderNavProps[] = [
-    {
-        id:'07',
-        link: '#products',
-        text: 'all products'    
-    },
-    {
-        id:'08',
-        link: '#products',
-        text: 'intibiome wellness'    
-    },
-    {
-        id:'09',
-        link: '#products',
-        text: 'intibiome active'    
-    },
-    {
-        id:'10',
-        link: '#products',
-        text: 'intibiome agecare'    
-    },
-]
-
-const health: HeaderNavProps[] = [
-    {
-        id:'11',
-        link: '#articles',
-        text: 'article 1'    
-    },
-    {
-        id:'12',
-        link: '#articles',
-        text: 'article 2'    
-    },
-    {
-        id:'13',
-        link: '#articles',
-        text: 'article 3'    
-    },
-    {
-        id:'14',
-        link: '#',
-        text: 'faq'    
-    },
-]
-
-
 
 export function Header(){
     return(
-        <WrapHeader>
+        <>
             <HeaderPresentContainer>
                 <img className='logo' src={logoImage} alt='logo image' style={{width:"195px", height:"79px"}}/>
                 <img className='icon' src={searchIcon} alt='serach icon' style={{width:"24px", height:"24px", paddingLeft: "424px"}}/>
             </HeaderPresentContainer>
             <HeaderNavContainer>
-                {routes.map((item) => (
-                    <HeaderNavLink key={item.text} id={item.id} href={item.link}>{item.text}</HeaderNavLink>
-                ))}
-            </HeaderNavContainer>
-            <HeaderNavHover id="about">
-                {about.map((item) => (
-                    <HeaderNavLink key={item.text} id={item.id} href={item.link}>{item.text}</HeaderNavLink>
-                ))}
-            </HeaderNavHover>
-            <HeaderNavHover>
-                {products.map((item) => (
-                    <HeaderNavLink key={item.text} id={item.id} href={item.link}>{item.text}</HeaderNavLink>
-                ))}
-            </HeaderNavHover>
-            <HeaderNavHover>
-                {health.map((item) => (
-                    <HeaderNavLink key={item.text} id={item.id} href={item.link}>{item.text}</HeaderNavLink>
-                ))}
-            </HeaderNavHover>
-        </WrapHeader>
+            {routes.map((item) => (
+                <HeaderNavLink key={item.text} className={item.id} href={item.link}>
+                    {item.text}
+                    {item.nav?.map((itemNav) => (
+                        <HeaderNavHover>
+                            {itemNav.text}
+                        </HeaderNavHover>
+                    ))}
+                </HeaderNavLink>
+           ))}
+           </HeaderNavContainer>
+        </>
     );
 };

@@ -46,8 +46,8 @@ export const WrapCardMain = styled.div`
 `
 export const WrapCardBox = styled.div`
     box-shadow: 0px 3px 16px #00000014;
-    height: 100%;
     width: 33.3%;
+    height: 100%;
     border-radius: 16px;
     :not(:last-child) {
         margin: 0px 33px 0px 0px;

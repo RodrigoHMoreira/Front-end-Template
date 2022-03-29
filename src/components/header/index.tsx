@@ -1,6 +1,11 @@
 import logoImage from '../../assets/logo01/logo01.png'
 import searchIcon from '../../assets/icon-search.svg';
-import { WrapHeader, HeaderPresentContainer, HeaderNavContainer, HeaderNavLink, HeaderNavHover } from '../../styles/header';
+import { WrapHeader, 
+    HeaderPresentContainer, 
+    HeaderNavContainer, 
+    HeaderNavLink, 
+    HeaderNavHover 
+} from './header';
 
 type HeaderNavProps = {
     id:string,
@@ -10,7 +15,7 @@ type HeaderNavProps = {
 
 const routes: HeaderNavProps[] = [
     {
-        id:'rodrigo',
+        id:'01',
         link:'#',
         text: 'about us'
     },
@@ -103,7 +108,7 @@ export function Header(){
             </HeaderPresentContainer>
             <HeaderNavContainer>
                 {routes.map((item) => (
-                    <HeaderNavLink key={item.text} className={item.id} href={item.link}>{item.text}</HeaderNavLink>
+                    <HeaderNavLink key={item.text} id={item.id} href={item.link}>{item.text}</HeaderNavLink>
                 ))}
             </HeaderNavContainer>
             <HeaderNavHover id="about">

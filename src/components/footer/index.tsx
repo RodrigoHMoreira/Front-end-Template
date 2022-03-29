@@ -1,6 +1,11 @@
 import logo from "../../assets/logo02/logo02.png"
 import logoInstagram from "../../assets/icon-instagram.svg"
-import { WrapFooter, FooterNavContainer, FooterNavLink, FooterIconsContainer } from "../../styles/footer";
+import { 
+    WrapFooter, 
+    FooterNavContainer, 
+    FooterNavLink, 
+    FooterIconsContainer 
+} from "./footer";
 
 type FooterNavProps = {
     link: string;
@@ -46,8 +51,8 @@ export function Footer() {
                 ))}
             </FooterNavContainer>
             <FooterIconsContainer>
-                <img src={logo} className="logo-image" alt="logo-image" style={{width:"116px", height:"29px"}}/>
-                <img src={logoInstagram} className="logo-instagram" alt="logo-instagram" style={{width:"43px", height:"43px"}}/>
+                <img src={logo} className="logo-image" alt="logo-image" style={{width:"8.5%", height:"2%", paddingRight:"20.5%"}}/>
+                <img src={logoInstagram} className="logo-instagram" alt="logo-instagram" style={{width:"2%", height:"2%",  paddingLeft:"20.5%"}}/>
             </FooterIconsContainer>
         </WrapFooter>
     );

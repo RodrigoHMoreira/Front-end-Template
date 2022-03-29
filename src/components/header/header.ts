@@ -34,21 +34,22 @@ export const HeaderNavLink = styled.a`
         margin: 0px 20px;
     }
 `
+
+export const HeaderNavHover = styled.div`
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #9D8E8E
+`
+
 export const HeaderNavContainer = styled.div`
     display: flex;
     justify-content: center; 
     background-color: #389CD6;
     width: 100%;
 
-    &:hover ${HeaderNavLink} {
-        background-color: red;
+    & ${HeaderNavLink}:hover + ${HeaderNavHover} {
+        display: none;
     }
-`
-
-export const HeaderNavHover = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #9D8E8E
 `

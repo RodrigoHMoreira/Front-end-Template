@@ -7,6 +7,12 @@ export const WrapFooter = styled.body`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media only screen and (max-width: 428px) {
+        margin: 80px 0px 0px 0px;
+    }
+
+
 `
 //Wrap of Navegation
 
@@ -16,6 +22,12 @@ export const FooterNavContainer = styled.div`
     margin: 41px 0px 0px 0px;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: 428px) {
+        flex-direction: column;
+        margin: 32px 0px 0px 0px;
+    }
+   
 `
 export const FooterNavLink = styled.a`
     color: #fff;
@@ -27,6 +39,13 @@ export const FooterNavLink = styled.a`
     :not(:last-child) {
        border-right: 2px #fff solid;
     }
+
+    @media only screen and (max-width: 428px) {
+        :not(:last-child) {
+            border-right: none;
+            border-bottom: 2px #fff solid;
+        }
+    }
 `
 //Wrap for Icons
 
@@ -35,4 +54,30 @@ export const FooterIconsContainer = styled.div`
     width: 100%;
     margin: 61px 0px 64px 0px;
     justify-content: space-around;
+
+    .logo-image {
+        padding-right:20.5%;
+    }
+
+    .icon-istagram {
+        padding-left:20.5%;
+    }
+
+    
+    @media only screen and (max-width: 428px) {
+        align-items: center;
+        flex-direction:column;
+        margin: 43px 0px 69px 0px;
+
+        .logo-image {
+            margin-bottom: 54px;
+            padding-right:0%;
+        }
+
+        .icon-istagram {
+            margin-top: 54px;
+            padding-left:0%;
+        }
+    }
+
 `

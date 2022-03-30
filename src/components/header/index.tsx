@@ -127,15 +127,15 @@ export function Header(){
     return(
         <>
             <HeaderPresentContainer>
-                <img className='logo' src={logoImage} alt='logo image' style={{width:"195px", height:"79px"}}/>
-                <img className='icon' src={searchIcon} alt='serach icon' style={{width:"24px", height:"24px", paddingLeft: "424px"}}/>
+                <a href="http://localhost:3001/" target="blank" style={{width:"15.8%"}}><img className='logo' src={logoImage} alt='logo image' style={{width:"100%"}}/></a>
+                <img className='icon' src={searchIcon} alt='serach icon' style={{width:"2.2%"}}/> 
             </HeaderPresentContainer>
             <HeaderNavContainer>
             {routes.map((item) => (
                 <HeaderNavLink key={item.text} className={item.id} href={item.link}>
                     {item.text}
                     {item.nav?.map((itemNav) => (
-                        <HeaderNavHover>
+                        <HeaderNavHover key={itemNav.text} className={itemNav.id} href={itemNav.link}>
                             {itemNav.text}
                         </HeaderNavHover>
                     ))}

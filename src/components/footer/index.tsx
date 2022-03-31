@@ -51,8 +51,8 @@ export function Footer() {
                 ))}
             </FooterNavContainer>
             <FooterIconsContainer>
-                <img src={logo} className="logo-image" alt="logo-image" style={{width:"116px", height:"29px"}}/>
-                <a className='icon-istagram' href='https://www.instagram.com/' target='blank' style={{width:'42.5px', height:'42.5px'}}><img src={logoInstagram} className="icon-instagram" alt="logo-instagram" style={{width:"100%", height:"100%"}}/></a>
+                <img src={logo} className="logo-image" alt="logo-image"/>
+                <a className='icon-istagram' href='https://www.instagram.com/' target='blank'><img src={logoInstagram} className="icon-instagram" alt="logo-instagram" style={{width:"100%", height:"100%"}}/></a>
             </FooterIconsContainer>
         </WrapFooter>
     );

@@ -1,6 +1,9 @@
 import logoImage from '../../assets/logo01/logo01.png'
 import searchIcon from '../../assets/icon-search.svg';
-import { HeaderPresentContainer, 
+import iconMenu from "../../assets/icon-menu/ic.menu.png"
+import { 
+    WrapHeader,
+    HeaderPresentContainer, 
     HeaderNavContainer,
     HeaderNavLink, 
     HeaderNavHover,
@@ -125,10 +128,11 @@ const routes: HeaderNavProps[] = [
 
 export function Header(){
     return(
-        <>
+        <WrapHeader>
             <HeaderPresentContainer>
-                <a href="http://localhost:3001/" target="blank" style={{width:"15.8%"}}><img className='logo' src={logoImage} alt='logo image' style={{width:"100%"}}/></a>
-                <img className='icon' src={searchIcon} alt='serach icon' style={{width:"2.2%"}}/> 
+                <img className='iconMenu' src={iconMenu} alt='iconMenu'></img>
+                <a className='linkLogo' href="http://localhost:3001/" target="blank"><img className='logoImage' src={logoImage} alt='logoImage'/></a>
+                <img className='iconSearch' src={searchIcon} alt='iconSearch'/> 
             </HeaderPresentContainer>
             <HeaderNavContainer>
             {routes.map((item) => (
@@ -142,6 +146,6 @@ export function Header(){
                 </HeaderNavLink>
            ))}
            </HeaderNavContainer>
-        </>
+        </WrapHeader>
     );
 };

@@ -93,10 +93,10 @@ export function Main() {
     return(
         <WrapMain>
             <WarpImageBanner>
-                <img id="banner-image" src={bannerImage} alt='banner-image' style={{width:"100%", height:"100%"}}/>
+                <img id="banner-image" src={bannerImage} alt='banner-image'/>
             </WarpImageBanner>
             <WarpImageBannerRes>
-                <img id="banner-image-responsive" src={bannerImageResponsive} alt='banner-image-responsive' style={{width:"100%", height:"100%"}}/>
+                <img id="banner-image-responsive" src={bannerImageResponsive} alt='banner-image-responsive'/>
             </WarpImageBannerRes>
             <WrapMainTitleZero id="brand-philosophy">we’re here to help</WrapMainTitleZero>
             <WrapMainText>
@@ -111,7 +111,7 @@ export function Main() {
                 </WrapMainParagraph>
             </WrapMainText>
             <WrapImageFileIcons>
-                <img className="icons" src={iconsImage} alt='icons image' style={{width:"100%", height:"100%"}}/>
+                <img className="fileIcons" src={iconsImage} alt='icons image'/>
             </WrapImageFileIcons>
             <WrapMainTitleZero>whatever your age. whatever your lifestyle. whatever your interests. </WrapMainTitleZero>
             <WrapMainText>
@@ -137,10 +137,10 @@ export function Main() {
                 ))}
             </WrapCardMain>
             <WarpImageBannerTwo>
-                <img id='banner-image02' src={bannerImage02} alt='banner-image02' style={{width:"100%", height:"100%"}}/>
+                <img id='banner-image02' src={bannerImage02} alt='banner-image02'/>
             </WarpImageBannerTwo>
             <WarpImageBannerTwoRes>
-                <img id='bannerimage02responsive' src={bannerImage02Responsive} alt='banner-image02-responsive' style={{width:"100%", height:"100%"}}/>
+                <img id='bannerimage02responsive' src={bannerImage02Responsive} alt='banner-image02-responsive'/>
             </WarpImageBannerTwoRes>
             <WrapMainTitleOne>keep up to date with our discoveries</WrapMainTitleOne>
             <WrapCardMain>

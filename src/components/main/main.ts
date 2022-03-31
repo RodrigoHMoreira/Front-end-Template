@@ -49,6 +49,10 @@ export const WrapImageFileIcons = styled.div`
     justify-content: center;
     width: 59%;
 
+    .fileIcons{
+        width:100%
+    }
+
     @media only screen and (max-width: 428px) {
         width: 91.5%
     }
@@ -68,8 +72,9 @@ export const WrapMainTitleZero = styled.h1`
 
     @media only screen and (max-width: 428px) {
         margin: 40px 0px 32px 0px;
-    }
+        width: 91.5%;
 
+    }
 `
 
 export const WrapMainTitleOne = styled.h1`

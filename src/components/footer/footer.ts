@@ -11,8 +11,6 @@ export const WrapFooter = styled.body`
     @media only screen and (max-width: 428px) {
         margin: 80px 0px 0px 0px;
     }
-
-
 `
 //Wrap of Navegation
 
@@ -27,8 +25,8 @@ export const FooterNavContainer = styled.div`
         flex-direction: column;
         margin: 32px 0px 0px 0px;
     }
-   
 `
+
 export const FooterNavLink = styled.a`
     color: #fff;
     text-decoration: none;
@@ -47,6 +45,7 @@ export const FooterNavLink = styled.a`
         }
     }
 `
+
 //Wrap for Icons
 
 export const FooterIconsContainer = styled.div`
@@ -56,11 +55,15 @@ export const FooterIconsContainer = styled.div`
     justify-content: space-around;
 
     .logo-image {
-        padding-right:20.5%;
+        width: 116px;
+        height: 29px;
+        padding-right: 424px;
     }
 
     .icon-istagram {
-        padding-left:20.5%;
+        width: 42.5px;
+        height: 42.5px;
+        padding-left: 88px;
     }
 
     

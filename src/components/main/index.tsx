@@ -111,7 +111,7 @@ export function Main() {
                 </WrapMainParagraph>
             </WrapMainText>
             <WrapImageFileIcons>
-                <img className="fileIcons" src={iconsImage} alt='icons image'/>
+                <img id="fileIcons" src={iconsImage} alt='icons image'/>
             </WrapImageFileIcons>
             <WrapMainTitleZero>whatever your age. whatever your lifestyle. whatever your interests. </WrapMainTitleZero>
             <WrapMainText>

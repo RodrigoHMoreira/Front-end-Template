@@ -12,13 +12,22 @@ export const WrapMain = styled.body`
 export const WarpImageBanner = styled.div`
     display:flex;
 
+    #banner-image {
+        width: 100%;
+    }
+
     @media only screen and (max-width: 428px) {
         display: none;
     }
 `
 
 export const WarpImageBannerRes = styled.div`
+    width: 100%;
     display:none;
+
+    #banner-image-responsive{
+        width: 100%;
+    }
 
     @media only screen and (max-width: 428px) {
         display: flex;
@@ -29,14 +38,23 @@ export const WarpImageBannerTwo = styled.div`
     display:flex;
     margin: 120px 0px 0px;
 
+    #banner-image02{
+        width: 100%;
+    }
+
     @media only screen and (max-width: 428px) {
         display: none;
     }
 `
 
 export const WarpImageBannerTwoRes = styled.div`
+    width: 100%;
     display:none;
     margin: 64px 0px 0px;
+
+    #bannerimage02responsive{
+        width: 100%;
+    }
 
     @media only screen and (max-width: 428px) {
         display: flex;
@@ -44,12 +62,12 @@ export const WarpImageBannerTwoRes = styled.div`
 `
 
 export const WrapImageFileIcons = styled.div`
+    width: 59%;
     margin: 40px 0px 0px;
     display: flex;
     justify-content: center;
-    width: 59%;
 
-    .fileIcons{
+    #fileIcons{
         width:100%
     }
 

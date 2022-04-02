@@ -22,6 +22,8 @@ export const HeaderPresentContainer = styled.div`
         display: none;
         position: relative;
         right: 20%;
+        border:none;
+        background-color: transparent;
 
         @media only screen and (max-width: 428px) {
             display: flex;
@@ -59,16 +61,12 @@ export const HeaderNavContainer = styled.div`
     @media only screen and (max-width: 428px) {
         display: none;
     }
-
 `
 
 export const HeaderNavHover = styled.a`
-    background-color: #9D8E8E;
-    width: 100%;
     display: none;
     color: #fff;
     text-decoration: none;
-    text-align: center;
     letter-spacing: 0.32px;
     font: normal normal bold 16px/22px Trebuchet MS;
     padding: 15px 24px 13px 24px;
@@ -86,6 +84,47 @@ export const HeaderNavLink = styled.a`
     }
     :hover ${HeaderNavHover} {
         display: flex;
-        justify-content: center;
     }
+`
+
+export const WrapHeaderNavHover =  styled.div`
+    width: 100%;
+    background-color: #9D8E8E;
+    position: absolute;
+    left: 0px;
+    top: 19.5%;
+    display: flex;
+    justify-content: start;
+    padding-left: 10%;
+`
+
+export const WrapMenuResponsive = styled.div`
+    display: none;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+    background: #389CD6;
+    text-align: center;
+    font: normal normal bold 16px/22px Trebuchet MS;
+    letter-spacing: 0.32px;
+    color: #FFFFFF;
+
+    a {
+        display: flex;
+        padding: 15px 24px 13px;
+        margin: 20px 0px 0px;
+        :first-child {
+            margin: 40px 0px 0px;
+        }
+    }
+
+    #navUndefined {
+            display: none;
+        }
+
+        @media only screen and (max-width: 428px) {
+            display: flex;
+    }
+
+
 `

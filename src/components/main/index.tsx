@@ -25,7 +25,7 @@ import {
     WrapCardMain, 
     WrapCardBox, 
     WrapCardText, 
-    WrapBtn 
+    WrapBtn,
 } from "./main"; 
 
 type CardsProductsProps = {
@@ -113,7 +113,7 @@ export function Main() {
             <WrapImageFileIcons>
                 <img id="fileIcons" src={iconsImage} alt='icons image'/>
             </WrapImageFileIcons>
-            <WrapMainTitleZero>whatever your age. whatever your lifestyle. whatever your interests. </WrapMainTitleZero>
+            <WrapMainTitleZero id="product-technology">whatever your age. whatever your lifestyle. whatever your interests. </WrapMainTitleZero>
             <WrapMainText>
                 <WrapMainParagraph>
                     Co-created with gynaecologists, our revolutionary products have been expertly developed to support your intimate microbiome and pH balance, and strengthen overall natural health.
@@ -122,7 +122,7 @@ export function Main() {
                     As the experts in intimate hygiene, we want to bring discussion about intimate wellness care out of the dark and demystify the taboos that surround it.
                 </WrapMainParagraph>
             </WrapMainText>
-            <WrapMainTitleOne>our products</WrapMainTitleOne>
+            <WrapMainTitleOne id="products">our products</WrapMainTitleOne>
             <WrapCardMain>
                 {cardProduct.map((item) => (
                     <WrapCardBox id={item.id}>
@@ -142,11 +142,11 @@ export function Main() {
             <WarpImageBannerTwoRes>
                 <img id='bannerimage02responsive' src={bannerImage02Responsive} alt='banner-image02-responsive'/>
             </WarpImageBannerTwoRes>
-            <WrapMainTitleOne>keep up to date with our discoveries</WrapMainTitleOne>
+            <WrapMainTitleOne id="articles">keep up to date with our discoveries</WrapMainTitleOne>
             <WrapCardMain>
                 {cardArticles.map((item) => (
                     <WrapCardBox id={item.id}>
-                        <img key={item.name} id={item.id} src={item.src} alt={item.name} style={{width:'100%', height:'100%'}}/>
+                        <img key={item.name} src={item.src} alt={item.name} style={{width:'100%', height:'100%'}}/>
                         <WrapCardText>
                             {item.text}
                         </WrapCardText>

@@ -138,8 +138,8 @@ export const WrapCardMain = styled.div`
 `
 export const WrapCardBox = styled.div`
     box-shadow: 0px 3px 16px #00000014;
-    width: 33.3%;
-    height: 18%;
+    width: 100%;
+    height: 100%;
     border-radius: 16px;
     :not(:last-child) {
         margin: 0px 33px 0px 0px;
@@ -152,7 +152,6 @@ export const WrapCardText = styled.div`
     color: #7B7070;
     letter-spacing: 0.4px;
     line-height: 28px;
-    word-wrap: break-word;
 `
 export const WrapCardProductName = styled.div`
     text-align: center;
@@ -162,6 +161,7 @@ export const WrapCardProductName = styled.div`
     border-radius: 0px 0px 16px 16px;
     padding: 20px 23px 24px 21px;
 `
+
 //Button
 export const WrapBtn = styled.div`
     width: 16%;

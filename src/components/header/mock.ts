@@ -86,5 +86,12 @@ export const mock: HeaderNavProps[] = [
         id:'nav04',
         link:'#',
         text: 'contact us',
+        nav: [
+            {
+                id:'nav15',
+                link:'#',
+                text: 'contact us',
+            }        
+        ]
     }
 ]

@@ -132,19 +132,39 @@ export const WrapMainParagraph = styled.p`
 
 //Cards
 export const WrapCardMain = styled.div`
-    width: 59%;
+    width: 1134px;
     display: flex;
     justify-content: center;
-`
-export const WrapCardBox = styled.div`
-    box-shadow: 0px 3px 16px #00000014;
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
-    :not(:last-child) {
-        margin: 0px 33px 0px 0px;
+
+    @media only screen and (max-width: 1134px) {
+        width: 100%;
+        justify-content: start;
+        margin-left: 20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        &::-webkit-scrollbar {
+            height: 0;
+        }
     }
 `
+
+export const WrapCardBox = styled.div`
+    box-shadow: 0px 3px 16px #00000014;
+    width:356px;
+    border-radius: 16px;
+        :not(:last-child){
+            margin: 0px 33px 0px 0px;
+        }
+
+        @media only screen and (max-width: 428px) {
+            :last-child{
+                margin: 0px 20px 0px 0px;
+            }
+        }   
+
+`
+
 export const WrapCardText = styled.div`
     padding: 24px 32px 32px 32px;
     font: normal normal normal 20px/28px Trebuchet MS;

@@ -41,8 +41,20 @@ export const FooterNavLink = styled.a`
     @media only screen and (max-width: 428px) {
         :not(:last-child) {
             border-right: none;
-            border-bottom: 2px #fff solid;
         }
+    }
+`
+
+export const FooterNavDiv = styled.div`
+    width: 24px;
+    height: 32px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    @media only screen and (max-width: 428px) {
+       display: flex;
     }
 `
 
@@ -69,16 +81,16 @@ export const FooterIconsContainer = styled.div`
     
     @media only screen and (max-width: 428px) {
         align-items: center;
-        flex-direction:column;
+        flex-direction:column-reverse;
         margin: 43px 0px 69px 0px;
 
         .logo-image {
-            margin-bottom: 54px;
+            margin-top: 54px;
             padding-right:0%;
         }
 
         .icon-istagram {
-            margin-top: 54px;
+            margin-bottom: 54px;
             padding-left:0%;
         }
     }

@@ -3,12 +3,7 @@ import bannerImageResponsive from '../../assets/banner-responsive/banner-respons
 import bannerImage02 from "../../assets/banner02/banner02.png";
 import bannerImage02Responsive from "../../assets/banner02-responsive/banner02-responsive.png";
 import iconsImage from "../../assets/file-icons/file-icons.png";
-import blueMask from "../../assets/blue-mask/bluemask.png";
-import greenMask from "../../assets/green-mask/greenmask.png";
-import pinkMask from "../../assets/pink-mask/pinkmask.png";
-import card01 from "../../assets/card01/card01.png"
-import card02 from "../../assets/card02/card02.png"
-import card03 from "../../assets/card03/card03.png"
+import { mocksProducts as cardsProducts, mocksArticles as cardsArticles } from './mock';
 
 import {
     WrapMain,
@@ -28,7 +23,7 @@ import {
     WrapBtn,
 } from "./main"; 
 
-type CardsProductsProps = {
+export type CardsProductsProps = {
     id: string,
     src: string,
     text: string,
@@ -36,61 +31,20 @@ type CardsProductsProps = {
     background: string
 }
 
-type CardsArticlesProps = {
+export type CardsArticlesProps = {
     id: string,
     src: string,
     text: string,
     name: string,
 }
 
-const cardProduct: CardsProductsProps[] = [
-    {
-        id: 'wellness',
-        src:  blueMask,
-        text: 'intibiome wellness daily intimate wash',
-        name: 'wellness',
-        background: '#389CD6'
-    },
-    {
-        id: 'active',
-        src:  greenMask,
-        text: 'intibiome active extra protection intimate wash',
-        name: 'active',
-        background: '#309D5F'
-    },
-    {
-        id: 'agecare',
-        src:  pinkMask,
-        text: 'intibiome agecare dryness relief intimate wash',
-        name: 'agecare',
-        background: '#EE6381'
-    }
-]
+interface Props {
+    menuOpen: boolean;
+}
 
-const cardArticles: CardsArticlesProps[] = [
-    {
-        id: 'card01',
-        src:  card01,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        name: 'card01'
-    },
-    {
-        id: 'card02',
-        src: card02,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        name: 'card02'
-    },
-    {
-        id: 'card03',
-        src:  card03,
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        name: 'card03'
-    }
-]
-
-
-export function Main() {
+export function Main({menuOpen}:Props) {
     return(
+        menuOpen === false ?
         <WrapMain>
             <WarpImageBanner>
                 <img id="banner-image" src={bannerImage} alt='banner-image'/>
@@ -124,9 +78,9 @@ export function Main() {
             </WrapMainText>
             <WrapMainTitleOne id="products">our products</WrapMainTitleOne>
             <WrapCardMain>
-                {cardProduct.map((item) => (
+                {cardsProducts.map((item) => (
                     <WrapCardBox id={item.id}>
-                        <img key={item.name} src={item.src} alt={item.name} style={{width:'100%', height:'100%'}}/>
+                        <img key={item.name} src={item.src} alt={item.name} style={{width:'356px', height:'351px'}}/>
                         <WrapCardText>
                             {item.text}
                         </WrapCardText>
@@ -144,9 +98,9 @@ export function Main() {
             </WarpImageBannerTwoRes>
             <WrapMainTitleOne id="articles">keep up to date with our discoveries</WrapMainTitleOne>
             <WrapCardMain>
-                {cardArticles.map((item) => (
+                {cardsArticles.map((item) => (
                     <WrapCardBox id={item.id}>
-                        <img key={item.name} src={item.src} alt={item.name} style={{width:'100%', height:'100%'}}/>
+                        <img key={item.name} src={item.src} alt={item.name} style={{width:'356px', height:'351px'}}/>
                         <WrapCardText>
                             {item.text}
                         </WrapCardText>
@@ -155,5 +109,8 @@ export function Main() {
             </WrapCardMain>
             <WrapBtn>see more</WrapBtn>
         </WrapMain>
+    :
+        <>
+        </>
     );
 };

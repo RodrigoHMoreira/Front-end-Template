@@ -1,14 +1,10 @@
-import { Header } from '../../components/header';
-import { Main } from '../../components/main';
-import { Footer } from '../../components/footer';
 import { Board } from './home';
+import { Header as Root } from '../../components/header';
 
 export function Home() {
     return(
         <Board>
-            <Header/>
-            <Main/>
-            <Footer/>  
+            <Root/>
         </Board>
     )
 }

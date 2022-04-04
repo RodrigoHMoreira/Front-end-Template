@@ -5,7 +5,35 @@ export const WrapHeader = styled.body`
     width: 100%;
     display: flex;
     align-items: center;
+   flex-direction: column;
+`
+
+export const WrapMenuResponsive = styled.div`
+    display: none;
+    align-items: start;
     flex-direction: column;
+    width: 100%;
+    background: #389CD6;
+    text-align: center;
+    font: normal normal bold 16px/22px Trebuchet MS;
+    letter-spacing: 0.32px;
+    color: #FFFFFF;
+    padding: 40px 0px 124px 0px;
+
+    a {
+        display: flex;
+        padding: 15px 24px 13px;
+        margin: 20px 0px 0px;
+    }
+
+    #navUndefined {
+            display: none;
+        }
+
+        @media only screen and (max-width: 428px) {
+            display: flex;
+    }
+
 `
 
 //Wrap of Presentation
@@ -98,33 +126,3 @@ export const WrapHeaderNavHover =  styled.div`
     padding-left: 10%;
 `
 
-export const WrapMenuResponsive = styled.div`
-    display: none;
-    align-items: start;
-    flex-direction: column;
-    width: 100%;
-    background: #389CD6;
-    text-align: center;
-    font: normal normal bold 16px/22px Trebuchet MS;
-    letter-spacing: 0.32px;
-    color: #FFFFFF;
-
-    a {
-        display: flex;
-        padding: 15px 24px 13px;
-        margin: 20px 0px 0px;
-        :first-child {
-            margin: 40px 0px 0px;
-        }
-    }
-
-    #navUndefined {
-            display: none;
-        }
-
-        @media only screen and (max-width: 428px) {
-            display: flex;
-    }
-
-
-`

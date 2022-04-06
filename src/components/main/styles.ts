@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 //Wrap of Main
-export const WrapMain = styled.body`
+export const WrapMain = styled.main`
     width:100%;
     display: flex;
     flex-direction: column;

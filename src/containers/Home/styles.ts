@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Board = styled.div`
+export const Wrapper = styled.main`
   background-color: #ffff;
   display: flex;
   flex-direction: column;

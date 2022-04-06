@@ -1,10 +1,23 @@
-import { Board } from './home';
-import { Header as Root } from '../../components/header';
+import { Wrapper } from './styles'
+import { Header } from '../../components/Header'
+import { Main } from '../../components/Main'
+import { Footer } from '../../components/Footer'
+import { useState } from 'react'
 
 export function Home() {
-    return(
-        <Board>
-            <Root/>
-        </Board>
-    )
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const handleToggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
+  return (
+    <Wrapper>
+      <Header menuOpen={isMenuOpen} handleToggleMenu={handleToggleMenu} />
+      {!isMenuOpen && (
+        <>
+          <Main />
+          <Footer />
+        </>
+      )}
+    </Wrapper>
+  )
 }

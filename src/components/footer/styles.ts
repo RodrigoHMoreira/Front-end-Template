@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const WrapFooter = styled.body`
+export const WrapFooter = styled.footer`
     width: 100%;
     background-color: #389CD6;
     margin: 120px 0px 0px 0px;

@@ -1,10 +1,10 @@
 import { CardsProductsProps, CardsArticlesProps } from ".";
-import blueMask from "../../assets/blue-mask/bluemask.png";
-import greenMask from "../../assets/green-mask/greenmask.png";
-import pinkMask from "../../assets/pink-mask/pinkmask.png";
-import card01 from "../../assets/card01/card01.png"
-import card02 from "../../assets/card02/card02.png"
-import card03 from "../../assets/card03/card03.png"
+import blueMask from "../../assets/produto-azul/produto-azul.png";
+import greenMask from "../../assets/produto-verde/produto-verde.png";
+import pinkMask from "../../assets/produto-rosa/produto-rosa.png";
+import card01 from "../../assets/cards-mulher/cards-mulher.png"
+import card02 from "../../assets/cards-mulher-perfil/cards-mulher-perfil.png"
+import card03 from "../../assets/cards-gotas/cards-gotas.png"
 
 export const mocksProducts: CardsProductsProps[] = [
     {

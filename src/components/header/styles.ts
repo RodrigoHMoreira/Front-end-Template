@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 //Wrap
-export const WrapHeader = styled.body`
+export const WrapHeader = styled.header`
     width: 100%;
     display: flex;
     align-items: center;
@@ -19,21 +19,21 @@ export const WrapMenuResponsive = styled.div`
     letter-spacing: 0.32px;
     color: #FFFFFF;
     padding: 40px 0px 124px 0px;
-
+ 
     a {
         display: flex;
         padding: 15px 24px 13px;
         margin: 20px 0px 0px;
     }
-
+ 
     #navUndefined {
             display: none;
         }
-
+ 
         @media only screen and (max-width: 428px) {
             display: flex;
     }
-
+ 
 `
 
 //Wrap of Presentation
@@ -45,19 +45,19 @@ export const HeaderPresentContainer = styled.div`
     align-items: center;
     box-shadow: 0px 4px #00000014;
     background-color: #FFFFFF;
-
+ 
     #iconMenu {
         display: none;
         position: relative;
         right: 20%;
         border:none;
         background-color: transparent;
-
+ 
         @media only screen and (max-width: 428px) {
             display: flex;
         }
     }
-
+ 
     .iconSearch{
         position: relative;
         left: 22%;
@@ -66,16 +66,16 @@ export const HeaderPresentContainer = styled.div`
             left: 20%;
         }
     }
-
+ 
     .logoImage {
         width: 195px;
-
+ 
         @media only screen and (max-width: 428px) {
             width: 143px;
         }
-
+ 
     }
-
+ 
 `
 
 //Wrap of Navegation
@@ -85,7 +85,8 @@ export const HeaderNavContainer = styled.div`
     width:100%;
     justify-content: center;
     background-color: #389CD6;
-
+    position: relative;
+ 
     @media only screen and (max-width: 428px) {
         display: none;
     }
@@ -115,14 +116,13 @@ export const HeaderNavLink = styled.a`
     }
 `
 
-export const WrapHeaderNavHover =  styled.div`
-    width: 100%;
+export const WrapHeaderNavHover = styled.div`
+    width: 90%;
     background-color: #9D8E8E;
     position: absolute;
     left: 0px;
-    top: 19.5%;
+    top: 50px;
     display: flex;
     justify-content: start;
     padding-left: 10%;
 `
-

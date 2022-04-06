@@ -66,13 +66,13 @@ export const FooterIconsContainer = styled.div`
     margin: 61px 0px 64px 0px;
     justify-content: space-around;
 
-    .logo-image {
+    #logo-image {
         width: 116px;
         height: 29px;
         padding-right: 424px;
     }
 
-    .icon-istagram {
+    #iconIstagram {
         width: 42.5px;
         height: 42.5px;
         padding-left: 88px;
@@ -84,12 +84,12 @@ export const FooterIconsContainer = styled.div`
         flex-direction:column-reverse;
         margin: 43px 0px 69px 0px;
 
-        .logo-image {
+        #logo-image {
             margin-top: 54px;
             padding-right:0%;
         }
 
-        .icon-istagram {
+        #iconIstagram {
             margin-bottom: 54px;
             padding-left:0%;
         }

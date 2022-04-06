@@ -36,8 +36,8 @@ export function Header(){
         <>
         <WrapHeader>
             <HeaderPresentContainer>
-                <button className='iconMenu' onClick={handleToggleMenu}><img  src={iconMenu} alt='icon-menu'/></button>
-                <a className='linkLogo' href="http://localhost:3000/"><img className='logoImage' src={logoImage} alt='logoImage'/></a>
+                <button id='iconMenu' onClick={handleToggleMenu}><img  src={iconMenu} alt='icon-menu'/></button>
+                <a id='linkLogo' href="http://localhost:3000/"><img className='logoImage' src={logoImage} alt='logoImage'/></a>
                 <img className='iconSearch' src={searchIcon} alt='iconSearch'/> 
             </HeaderPresentContainer>
             {isMenuOpen ?
@@ -51,12 +51,12 @@ export function Header(){
                 ))}
                 </WrapMenuResponsive>
             :
-                <HeaderNavContainer>
+                <HeaderNavContainer id="NavContainer">
                     {routes.map((item) => (
-                        <HeaderNavLink key={item.text} className={item.id} href={item.link}>
+                        <HeaderNavLink id="HeaderNavLink" key={item.text} className={item.id} href={item.link}>
                             {item.text}
                             <img className='iconArrowDown' src={iconArrowDown} alt="icon- arrow-menu" style={{marginLeft:'10px', width:'15px', height:'15px'}}/>
-                            <WrapHeaderNavHover>
+                            <WrapHeaderNavHover id="HeaderNavHover">
                                 {item.nav?.map((itemNav) => (
                                     <HeaderNavHover key={itemNav.text} className={itemNav.id} href={itemNav.link}>
                                         {itemNav.text}

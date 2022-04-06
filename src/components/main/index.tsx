@@ -77,9 +77,9 @@ export function Main({menuOpen}:Props) {
                 </WrapMainParagraph>
             </WrapMainText>
             <WrapMainTitleOne id="products">our products</WrapMainTitleOne>
-            <WrapCardMain>
+            <WrapCardMain id="cardMainProducts">
                 {cardsProducts.map((item) => (
-                    <WrapCardBox id={item.id}>
+                    <WrapCardBox>
                         <img key={item.name} src={item.src} alt={item.name} style={{width:'356px', height:'351px'}}/>
                         <WrapCardText>
                             {item.text}
@@ -97,7 +97,7 @@ export function Main({menuOpen}:Props) {
                 <img id='bannerimage02responsive' src={bannerImage02Responsive} alt='banner-image02-responsive'/>
             </WarpImageBannerTwoRes>
             <WrapMainTitleOne id="articles">keep up to date with our discoveries</WrapMainTitleOne>
-            <WrapCardMain>
+            <WrapCardMain id="cardMainArticles">
                 {cardsArticles.map((item) => (
                     <WrapCardBox id={item.id}>
                         <img key={item.name} src={item.src} alt={item.name} style={{width:'356px', height:'351px'}}/>
@@ -107,7 +107,9 @@ export function Main({menuOpen}:Props) {
                     </WrapCardBox>
                 ))}
             </WrapCardMain>
-            <WrapBtn>see more</WrapBtn>
+            <WrapBtn id='buttonSeeMore' onClick={()=>{console.log('Button it´s work!')}}>
+                see more
+            </WrapBtn>
         </WrapMain>
     :
         <>

@@ -46,7 +46,7 @@ export const HeaderPresentContainer = styled.div`
     box-shadow: 0px 4px #00000014;
     background-color: #FFFFFF;
 
-    .iconMenu {
+    #iconMenu {
         display: none;
         position: relative;
         right: 20%;

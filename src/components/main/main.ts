@@ -183,11 +183,12 @@ export const WrapCardProductName = styled.div`
 `
 
 //Button
-export const WrapBtn = styled.div`
+export const WrapBtn = styled.button`
     width: 16%;
     background: #389CD6;
     margin: 85px 0px 0px 0px;
     padding: 20px 22px;
+    border: none;
     border-radius: 16px;
     text-align: center;
     font: normal normal bold 20px/28px Trebuchet MS;
